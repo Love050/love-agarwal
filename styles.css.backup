@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #a0a0a0;
+    --accent-color: #4a4a4a;
+    --bg-dark: #000000;
+    --bg-section: #0a0a0a;
+    --bg-card: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--primary-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff, #888888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Full Screen Robot Display */
+.robot-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 50%, #2a2a2a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Particle Canvas */
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Cinematic Name Text */
+.name-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(3rem, 8vw, 10rem);
+    font-weight: 900;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    letter-spacing: 0.1em;
+    color: transparent;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    z-index: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    animation: floatText 6s ease-in-out infinite;
+    text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.05),
+        0 0 40px rgba(255, 255, 255, 0.03);
+    width: 90vw;
+    text-align: center;
+}
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-15px) scale(1.02);
+        opacity: 0.9;
+    }
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+
+/* Hide default Spline watermark */
+spline-viewer::part(logo) {
+    display: none !important;
+}
+
+spline-viewer #logo {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Custom Spline Credit */
+.spline-credit {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.spline-credit::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.spline-credit:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.spline-credit:hover::before {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+}
+
+.cert-date {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.cert-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-issuer {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.cert-description {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.cert-skills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.cert-skills span {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+    .name-text {
+        font-size: clamp(2rem, 7vw, 5rem);
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 480px) {
+    .name-text {
+        font-size: clamp(1.5rem, 6vw, 3.5rem);
+        letter-spacing: 0.05em;
+    }
+}
