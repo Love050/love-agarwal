@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Agarwal - Portfolio</title>
+    <title>Love Agarwal - Creative Portfolio</title>
     <link rel="stylesheet" href="./styles.css">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
 </head>
 <body>
     <!-- Splash Screen -->
@@ -23,10 +22,7 @@
         <ul class="nav-menu">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#certifications" class="nav-link">Certifications</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="hamburger">
@@ -36,50 +32,70 @@
         </div>
     </nav>
 
-    <!-- Full Screen Robot Display -->
+    <!-- Full Screen Creative Hero -->
     <section id="home" class="robot-screen">
-        <!-- Particle Background -->
-        <canvas id="particles-canvas"></canvas>
+        <!-- Animated Background Shapes -->
+        <div class="creative-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
         
-        <!-- Cinematic Text Background -->
-        <div class="name-text">LOVE AGARWAL</div>
+        <!-- Animated Grid -->
+        <div class="grid-overlay"></div>
         
-        <spline-viewer url="./nexbot_by_aximoris_copy_copy.spline"></spline-viewer>
-        
-        <!-- Custom badge to cover Spline watermark -->
-        <a href="#home" class="spline-badge">Love Agarwal</a>
+        <!-- Custom Cursor Follower -->
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
         
         <!-- Hero Text Overlay -->
         <div class="hero-overlay">
-            <h1 class="hero-main-title">AI-Powered Web & Product Design for Modern Businesses</h1>
-            <p class="hero-services">Web Design • Web Development • Branding • 3D Experience Design</p>
-            <div class="scroll-indicator">
-                <span>Scroll to explore</span>
-                <div class="scroll-arrow"></div>
+            <h1 class="hero-main-title">
+                <span class="wave">👋</span>
+                <span class="word">Hi,</span>
+                <span class="word">I'm</span>
+                <span class="word">Love</span>
+                <span class="word">Agarwal</span>
+            </h1>
+            
+            <div class="hero-cta">
+                <a href="#about" class="cta-button primary">
+                    <span>View My Work</span>
+                    <div class="btn-bg"></div>
+                </a>
+                <a href="#contact" class="cta-button secondary">
+                    <span>Get In Touch</span>
+                    <div class="btn-bg"></div>
+                </a>
             </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section reveal-section">
+    <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead">Hi, I'm Love Agarwal — a designer and developer focused on building modern digital experiences for brands and businesses.</p>
-                    <p>I specialize in creating clean websites, intuitive interfaces, and AI-driven solutions that help companies stand out in competitive markets. From web design to branding to interactive 3D experiences, I turn ideas into polished digital products.</p>
+                    <p class="lead">I'm a multidisciplinary creative who brings ideas to life through design, code, and storytelling.</p>
+                    <p>From graphic design and photography to content creation and AI-powered solutions, I combine technical skills with creative vision. I build websites using cutting-edge tools, craft compelling visual stories, and leverage AI to create smarter, more innovative experiences.</p>
+                    <p>With a foundation in digital marketing and strong leadership abilities, I manage projects efficiently and always find ways to make things better. Whether it's designing a brand identity, capturing the perfect shot, or developing an interactive website, I approach every challenge with fresh ideas and strategic thinking.</p>
                     <div class="about-stats">
                         <div class="stat">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>8+</h3>
-                            <p>Roles & Projects</p>
+                            <h3>50+</h3>
+                            <p>Creative Projects</p>
                         </div>
                         <div class="stat">
                             <h3>5+</h3>
-                            <p>Organizations</p>
+                            <p>Happy Clients</p>
                         </div>
                     </div>
                 </div>
@@ -98,297 +114,14 @@
         </div>
     </section>
 
-    <!-- Services Section - Sticky Scroll -->
-    <section id="services" class="section reveal-section">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <p style="text-align: center; color: var(--secondary-color); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                Professional digital solutions tailored to your business needs with transparent, competitive pricing
-            </p>
-            
-            <div class="sticky-scroll-container">
-                <!-- Service 1: Web Design -->
-                <div class="sticky-scroll-item">
-                    <div class="sticky-content">
-                        <div class="service-number">01</div>
-                        <h3 class="service-title">Website Design</h3>
-                        <p class="service-description">Clean, modern UI/UX design optimized for conversions and brand clarity. Every pixel crafted to deliver exceptional user experiences.</p>
-                        <div class="service-features">
-                            <div class="service-feature">✓ Responsive Design</div>
-                            <div class="service-feature">✓ User Flow Optimization</div>
-                            <div class="service-feature">✓ Figma Prototypes</div>
-                            <div class="service-feature">✓ Design System</div>
-                        </div>
-                        <div class="service-pricing">
-                            <span class="price-label">Starting from</span>
-                            <span class="price-amount">$799+</span>
-                        </div>
-                    </div>
-                    <div class="sticky-visual">
-                        <div class="visual-gradient gradient-1">
-                            <img src="./public/service/website design/Screenshot 2025-11-19 201743.png" alt="Website Design" class="service-visual-image" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 2: Web Development -->
-                <div class="sticky-scroll-item">
-                    <div class="sticky-content">
-                        <div class="service-number">02</div>
-                        <h3 class="service-title">Website Development</h3>
-                        <p class="service-description">Fast, responsive, SEO-friendly websites built with React, Next.js, and modern frameworks. Production-ready code that scales.</p>
-                        <div class="service-features">
-                            <div class="service-feature">✓ React & Next.js</div>
-                            <div class="service-feature">✓ SEO Optimized</div>
-                            <div class="service-feature">✓ Performance Tuned</div>
-                            <div class="service-feature">✓ CMS Integration</div>
-                        </div>
-                        <div class="service-pricing">
-                            <span class="price-label">Starting from</span>
-                            <span class="price-amount">$1,299+</span>
-                        </div>
-                    </div>
-                    <div class="sticky-visual">
-                        <div class="visual-gradient gradient-2">
-                            <img src="./public/service/website develop/Screenshot 2025-11-19 205519.png" alt="Website Development" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3: Branding -->
-                <div class="sticky-scroll-item">
-                    <div class="sticky-content">
-                        <div class="service-number">03</div>
-                        <h3 class="service-title">Branding & Visual Identity</h3>
-                        <p class="service-description">Logo, color system, typography, brand guidelines — everything you need for a professional identity that stands out.</p>
-                        <div class="service-features">
-                            <div class="service-feature">✓ Logo Design</div>
-                            <div class="service-feature">✓ Color Palette</div>
-                            <div class="service-feature">✓ Typography System</div>
-                            <div class="service-feature">✓ Brand Guidelines</div>
-                        </div>
-                        <div class="service-pricing">
-                            <span class="price-label">Starting from</span>
-                            <span class="price-amount">$599+</span>
-                        </div>
-                    </div>
-                    <div class="sticky-visual">
-                        <div class="visual-gradient gradient-3">
-                            <img src="./public/service/Branding & Visual Identity/IMG-20221202-WA0000.jpg" alt="Branding & Visual Identity" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4: 3D & AI -->
-                <div class="sticky-scroll-item">
-                    <div class="sticky-content">
-                        <div class="service-number">04</div>
-                        <h3 class="service-title">AI-Enhanced User Experiences</h3>
-                        <p class="service-description">3D interactions, Spline visuals, AI-powered features, and advanced animations that create unforgettable digital experiences.</p>
-                        <div class="service-features">
-                            <div class="service-feature">✓ 3D Web Experiences</div>
-                            <div class="service-feature">✓ Spline Integration</div>
-                            <div class="service-feature">✓ AI Features</div>
-                            <div class="service-feature">✓ Advanced Animations</div>
-                        </div>
-                        <div class="service-pricing">
-                            <span class="price-label">Starting from</span>
-                            <span class="price-amount">$1,499+</span>
-                        </div>
-                    </div>
-                    <div class="sticky-visual">
-                        <div class="visual-gradient gradient-4">
-                            <img src="./public/service/AI-Enhanced User Experiences/Screenshot 2025-11-19 202406.png" alt="AI-Enhanced User Experiences" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 5: Content Strategy -->
-                <div class="sticky-scroll-item">
-                    <div class="sticky-content">
-                        <div class="service-number">05</div>
-                        <h3 class="service-title">Content & Creative Strategy</h3>
-                        <p class="service-description">Professional content creation, storytelling, and digital branding support. Strategic content that connects with your audience.</p>
-                        <div class="service-features">
-                            <div class="service-feature">✓ Content Strategy</div>
-                            <div class="service-feature">✓ Copywriting</div>
-                            <div class="service-feature">✓ Social Media</div>
-                            <div class="service-feature">✓ Brand Storytelling</div>
-                        </div>
-                        <div class="service-pricing">
-                            <span class="price-label">Starting from</span>
-                            <span class="price-amount">$499+</span>
-                        </div>
-                    </div>
-                    <div class="sticky-visual">
-                        <div class="visual-gradient gradient-5">
-                            <img src="./public/service/Content & Creative Strategy/12_11_11zon.jpg" alt="Content & Creative Strategy" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service CTA -->
-            <div class="services-cta">
-                <h3>Need a custom package?</h3>
-                <p>Let's discuss your project and create a tailored solution that fits your budget and goals.</p>
-                <a href="#contact" class="services-cta-btn">Get a Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section - Bento Grid -->
-    <section id="skills" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <p style="text-align: center; color: var(--secondary-color); margin-bottom: 3rem;">
-                Comprehensive skill set across design, development, and digital innovation
-            </p>
-            
-            <!-- Bento Grid Container -->
-            <div class="skills-bento-grid">
-                <!-- Design Category -->
-                <div class="skills-bento-item skills-bento-large">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">🎨</span>
-                        <h3 class="skills-bento-title">Design</h3>
-                    </div>
-                    <div class="skills-bento-content">
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>UI/UX Design</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>Branding & Identity</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>Product Design</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>Web Layouts</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-
-                <!-- Development Category -->
-                <div class="skills-bento-item skills-bento-large">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">💻</span>
-                        <h3 class="skills-bento-title">Development</h3>
-                    </div>
-                    <div class="skills-bento-content">
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>React & Next.js</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>Tailwind CSS</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>JavaScript/TypeScript</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>Responsive Development</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-
-                <!-- Specialty Category -->
-                <div class="skills-bento-item skills-bento-wide">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">✨</span>
-                        <h3 class="skills-bento-title">Specialty</h3>
-                    </div>
-                    <div class="skills-bento-content">
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>AI-driven Experiences</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>3D Websites</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-bullet">•</span>
-                                <span>Content & Strategy</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-
-                <!-- Tools -->
-                <div class="skills-bento-item">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">🛠️</span>
-                    </div>
-                    <div class="skills-bento-content">
-                        <h4 class="skills-bento-subtitle">Adobe Suite</h4>
-                        <p class="skills-bento-text">Photoshop, Illustrator, After Effects</p>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-
-                <!-- Video Editing -->
-                <div class="skills-bento-item">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">🎬</span>
-                    </div>
-                    <div class="skills-bento-content">
-                        <h4 class="skills-bento-subtitle">Video Production</h4>
-                        <p class="skills-bento-text">Premiere Pro, Motion Graphics</p>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-
-                <!-- Social Media -->
-                <div class="skills-bento-item">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">📱</span>
-                    </div>
-                    <div class="skills-bento-content">
-                        <h4 class="skills-bento-subtitle">Digital Marketing</h4>
-                        <p class="skills-bento-text">SEO, SEM, Social Strategy</p>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-
-                <!-- Photography -->
-                <div class="skills-bento-item">
-                    <div class="skills-bento-header">
-                        <span class="skills-bento-icon">📸</span>
-                    </div>
-                    <div class="skills-bento-content">
-                        <h4 class="skills-bento-subtitle">Photography</h4>
-                        <p class="skills-bento-text">Visual Storytelling</p>
-                    </div>
-                    <div class="skills-bento-skeleton"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Section -->
-    <section id="projects" class="section reveal-section">
+    <section id="projects" class="section">
         <div class="parallax-bg"></div>
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="hover-effect-grid">
                 <!-- Project 1 -->
-                <a href="#" class="hover-effect-card">
+                <a href="https://robtor.me" target="_blank" class="hover-effect-card">
                     <div class="hover-effect-card-inner">
                         <div class="hover-effect-icon">🤖</div>
                         <h3 class="hover-effect-title">AI Health Assistant</h3>
@@ -398,7 +131,7 @@
                 </a>
 
                 <!-- Project 2 -->
-                <a href="#" class="hover-effect-card">
+                <a href="https://drive.google.com/drive/folders/1mjUCdvoU6xmaMVUrSURsMjvfIsjwti66?usp=drive_link" target="_blank" class="hover-effect-card">
                     <div class="hover-effect-card-inner">
                         <div class="hover-effect-icon">🎨</div>
                         <h3 class="hover-effect-title">Smart Design Studio Website</h3>
@@ -408,7 +141,7 @@
                 </a>
 
                 <!-- Project 3 -->
-                <a href="#" class="hover-effect-card">
+                <a href="https://drive.google.com/drive/folders/1lyMRoz__mAJuU7MPUYfMLa2aZNBrnk0r?usp=drive_link" target="_blank" class="hover-effect-card">
                     <div class="hover-effect-card-inner">
                         <div class="hover-effect-icon">📱</div>
                         <h3 class="hover-effect-title">Content Creator Brand Package</h3>
@@ -418,31 +151,31 @@
                 </a>
 
                 <!-- Project 4 -->
-                <a href="#" class="hover-effect-card">
+                <a href="https://drive.google.com/drive/folders/1U4t5wJwrcZKnLhNi6U3qCo1mclBPFA45?usp=drive_link" target="_blank" class="hover-effect-card">
                     <div class="hover-effect-card-inner">
-                        <div class="hover-effect-icon">🌐</div>
-                        <h3 class="hover-effect-title">Social Impact Campaign</h3>
-                        <p class="hover-effect-description">Digital strategy and visual content for civic engagement initiatives.</p>
+                        <div class="hover-effect-icon">📊</div>
+                        <h3 class="hover-effect-title">Digital Marketing Campaigns</h3>
+                        <p class="hover-effect-description">Strategic digital marketing campaigns with SEO optimization and analytics-driven results.</p>
                         <div class="hover-effect-arrow">→</div>
                     </div>
                 </a>
 
                 <!-- Project 5 -->
-                <a href="#" class="hover-effect-card">
+                <a href="https://www.instagram.com/ecogreennagarnigam?igsh=MXR5dmt0N2x4NXY5dA==" target="_blank" class="hover-effect-card">
                     <div class="hover-effect-card-inner">
-                        <div class="hover-effect-icon">✨</div>
-                        <h3 class="hover-effect-title">3D Interactive Experience</h3>
-                        <p class="hover-effect-description">Immersive 3D website design with advanced animations and user interactions.</p>
+                        <div class="hover-effect-icon">📱</div>
+                        <h3 class="hover-effect-title">Social Media Management</h3>
+                        <p class="hover-effect-description">Complete social media strategy, content creation, and community engagement for brands.</p>
                         <div class="hover-effect-arrow">→</div>
                     </div>
                 </a>
 
                 <!-- Project 6 -->
-                <a href="#" class="hover-effect-card">
+                <a href="https://drive.google.com/drive/folders/1Fo-fw8JsShW6WfTpNp0aX4JBysFbUcbE?usp=drive_link" target="_blank" class="hover-effect-card">
                     <div class="hover-effect-card-inner">
-                        <div class="hover-effect-icon">🚀</div>
-                        <h3 class="hover-effect-title">E-commerce Platform</h3>
-                        <p class="hover-effect-description">Full-stack e-commerce solution with seamless checkout and inventory management.</p>
+                        <div class="hover-effect-icon">🎨</div>
+                        <h3 class="hover-effect-title">Graphic Design Portfolio</h3>
+                        <p class="hover-effect-description">Creative visual designs including logos, posters, branding materials, and digital illustrations.</p>
                         <div class="hover-effect-arrow">→</div>
                     </div>
                 </a>
@@ -450,170 +183,8 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section section-dark reveal-section">
-        <div class="container">
-            <h2 class="section-title">Certifications & Achievements</h2>
-            
-            <!-- Timeline Container -->
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-                <!-- 2025 Timeline Items -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">🏆</span>
-                                <span class="cert-date">Nov 2025</span>
-                            </div>
-                            <h3>Hackathon Participation</h3>
-                            <p class="cert-issuer">Eshan Group Of Institutions</p>
-                            <p class="timeline-description">Participated demonstrating innovative problem-solving and technical presentation skills</p>
-                            <div class="cert-skills">
-                                <span>Presentation</span>
-                                <span>Vibe Coding</span>
-                                <span>Problem Solving</span>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">🌍</span>
-                                <span class="cert-date">Oct 2025</span>
-                            </div>
-                            <h3>UNESCO Hackathon</h3>
-                            <p class="cert-issuer">UNESCO</p>
-                            <p class="timeline-description">Participated in global hackathon focused on sustainable development and digital innovation</p>
-                            <div class="cert-skills">
-                                <span>Video Editing</span>
-                                <span>Content Strategy</span>
-                                <span>After Effects</span>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">⚡</span>
-                                <span class="cert-date">Sep 2025</span>
-                            </div>
-                            <h3>Idea to Deployment</h3>
-                            <p class="cert-issuer">LetsUpgrade x NSDC x GDG MAD</p>
-                            <p class="timeline-description">3-day intensive bootcamp: Built Recipe Maker, Dating & Mental Health apps using Firebase, Lovable, Windsurf</p>
-                            <div class="cert-skills">
-                                <span>Firebase</span>
-                                <span>Rapid Prototyping</span>
-                                <span>Deployment</span>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">💡</span>
-                                <span class="cert-date">Aug 2025</span>
-                            </div>
-                            <h3>Eureka Hackathon</h3>
-                            <p class="cert-issuer">E Cell VGI</p>
-                            <p class="timeline-description">Showcased entrepreneurial thinking and innovative solutions</p>
-                        </div>
-                        
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">🤖</span>
-                                <span class="cert-date">Aug 2025</span>
-                            </div>
-                            <h3>Generative AI & Prompt Engineering</h3>
-                            <p class="cert-issuer">LetsUpgrade</p>
-                            <p class="timeline-description">Mastered AI interaction, crafting effective prompts, and leveraging LLMs for creative problem-solving</p>
-                            <div class="cert-skills">
-                                <span>Prompt Engineering</span>
-                                <span>Generative AI</span>
-                                <span>GPT Models</span>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">📱</span>
-                                <span class="cert-date">Jan 2025</span>
-                            </div>
-                            <h3>Fundamentals of Digital Marketing</h3>
-                            <p class="cert-issuer">Google Certified</p>
-                            <p class="timeline-description">Comprehensive certification covering SEO, SEM, and social media marketing strategies</p>
-                            <div class="cert-skills">
-                                <span>SEO</span>
-                                <span>SEM</span>
-                                <span>Social Media Marketing</span>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">💼</span>
-                                <span class="cert-date">Jan 2025</span>
-                            </div>
-                            <h3>LinkedIn Presence</h3>
-                            <p class="cert-issuer">The Personal Growth</p>
-                            <p class="timeline-description">Enhanced professional branding and networking on LinkedIn</p>
-                            <div class="cert-skills">
-                                <span>Personal Branding</span>
-                                <span>Communication</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 2023 Timeline Items -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2023</div>
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">🎨</span>
-                                <span class="cert-date">Jun 2023</span>
-                            </div>
-                            <h3>Content Design</h3>
-                            <p class="cert-issuer">BrainX Academia</p>
-                            <p class="timeline-description">Developed skills in graphic design and video content creation</p>
-                            <div class="cert-skills">
-                                <span>Graphic Design</span>
-                                <span>Video Editing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 2022 Timeline Items -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2022</div>
-                        <div class="timeline-card">
-                            <div class="cert-header">
-                                <span class="cert-icon">🚀</span>
-                                <span class="cert-date">Dec 2022</span>
-                            </div>
-                            <h3>Internship Certificate</h3>
-                            <p class="cert-issuer">Mindler</p>
-                            <p class="timeline-description">Completed professional internship gaining hands-on experience in entrepreneurship and design</p>
-                            <div class="cert-skills">
-                                <span>Entrepreneurship</span>
-                                <span>Graphic Design</span>
-                                <span>Communication</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="section section-dark reveal-section">
-        <div class="container">
+    <section id="contact" class="section section-dark">\n        <div class="container">
             <h2 class="section-title">Let's Build Something Great Together</h2>
             <p class="contact-subtitle">I help businesses turn ideas into clean, modern, high-performing digital experiences.<br>Share your project details and I'll get back within 24 hours.</p>
             
@@ -638,7 +209,7 @@
                             <span class="contact-detail-icon">💼</span>
                             <div class="contact-detail-info">
                                 <label class="contact-detail-label">LinkedIn</label>
-                                <a href="https://www.linkedin.com/in/love-agarwal-aa2692247/" target="_blank" class="contact-detail-link">Connect on LinkedIn</a>
+                                <a href="https://www.linkedin.com/in/lovegarwal/" target="_blank" class="contact-detail-link">Connect on LinkedIn</a>
                             </div>
                         </div>
                         
@@ -661,7 +232,7 @@
                     
                     <div class="contact-card-footer">
                         <div class="social-links-modern">
-                            <a href="https://www.linkedin.com/in/love-agarwal-aa2692247/" target="_blank" class="social-link-modern" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/lovegarwal/" target="_blank" class="social-link-modern" aria-label="LinkedIn">
                                 <span>LinkedIn</span>
                             </a>
                             <a href="https://drive.google.com/drive/folders/1mjUCdvoU6xmaMVUrSURsMjvfIsjwti66?usp=sharing" target="_blank" class="social-link-modern" aria-label="Portfolio">
@@ -751,12 +322,141 @@
         </div>
     </section>
 
+    <!-- Check Out More Section -->
+    <section class="section" style="padding: 4rem 0; background: var(--bg-dark);">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">Check Out More</h2>
+            <p style="color: var(--secondary-color); margin-bottom: 3rem; font-size: 1.1rem;">Explore my other projects and creations</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <a href="https://protowork.vercel.app" target="_blank" class="checkout-link">
+                    <div style="padding: 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(253, 185, 19, 0.2); border-radius: 15px; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🚀</div>
+                        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">Protowork</h3>
+                        <p style="color: var(--secondary-color); font-size: 0.9rem;">protowork.vercel.app</p>
+                    </div>
+                </a>
+                
+                <a href="https://medical-report-reader-sgfu.onrender.com/" target="_blank" class="checkout-link">
+                    <div style="padding: 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(253, 185, 19, 0.2); border-radius: 15px; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🏥</div>
+                        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">Medical Report Reader</h3>
+                        <p style="color: var(--secondary-color); font-size: 0.9rem;">AI-powered health analysis</p>
+                    </div>
+                </a>
+                
+                <a href="https://salon-elysee.netlify.app" target="_blank" class="checkout-link">
+                    <div style="padding: 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(253, 185, 19, 0.2); border-radius: 15px; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">✨</div>
+                        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">Salon Elysee</h3>
+                        <p style="color: var(--secondary-color); font-size: 0.9rem;">salon-elysee.netlify.app</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.instagram.com/l.a.builds?igsh=MXQ3NjBtOXg4bG10Nw==" target="_blank" class="checkout-link">
+                    <div style="padding: 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(253, 185, 19, 0.2); border-radius: 15px; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">📸</div>
+                        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">L.A.Builds</h3>
+                        <p style="color: var(--secondary-color); font-size: 0.9rem;">@l.a.builds on Instagram</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Love Agarwal. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Creative Animations Script -->
+    <script>
+        // Wait for page load
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // Custom Cursor
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            window.addEventListener('mousemove', (e) => {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: "forwards" });
+            });
+            
+            // Interactive elements cursor effect
+            const interactiveElements = document.querySelectorAll('a, button');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(2)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
+            });
+            
+            // Animated text reveal - split into words
+            const heroTitle = document.querySelector('.hero-main-title');
+            if (heroTitle) {
+                const words = heroTitle.querySelectorAll('.word');
+                words.forEach((word, index) => {
+                    word.style.animationDelay = `${2.2 + index * 0.1}s`;
+                });
+            }
+            
+            // Parallax effect on scroll
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const shapes = document.querySelectorAll('.floating-shape');
+                const orbs = document.querySelectorAll('.gradient-orb');
+                
+                shapes.forEach((shape, index) => {
+                    const speed = 0.5 + (index * 0.2);
+                    shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+                });
+                
+                orbs.forEach((orb, index) => {
+                    const speed = 0.3 + (index * 0.15);
+                    orb.style.transform = `translateY(${scrolled * speed}px) scale(${1 + scrolled * 0.0005})`;
+                });
+            });
+            
+            // Auto-scroll to about after 4 seconds
+            setTimeout(() => {
+                document.querySelector('#about').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 4000);
+            
+            // Magnetic button effect
+            const buttons = document.querySelectorAll('.cta-button');
+            buttons.forEach(button => {
+                button.addEventListener('mousemove', (e) => {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    
+                    button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translate(0, 0)';
+                });
+            });
+        });
+    </script>
 
     <script type="module" src="./script.js"></script>
 </body>
